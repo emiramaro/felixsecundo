@@ -53,17 +53,21 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div className="flex items-center">
               <svg
-                className="h-8 w-8 text-primary"
-                fill="none"
+                className="h-6 w-6 fill-current"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                />
+                {/* Simplified pancreas shape */}
+                <path d="M6 12C6 9 7 7 10 7C13 7 14 9 14 12C14 15 13 17 10 17C7 17 6 15 6 12Z" />
+                <path d="M14 12C14 9 15 7 18 7C21 7 22 9 22 12" />
+
+                {/* Magnifying glass */}
+                <circle cx="8" cy="8" r="3" />
+                <line x1="11" y1="11" x2="15" y2="15" />
               </svg>
               <span className="ml-2 text-xl font-semibold">Felix Lab</span>
             </div>
@@ -133,7 +137,7 @@ export default function Home() {
 
         <section id="research" className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Current Research Projects</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Research Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-4">Early Detection Biomarkers</h3>
@@ -153,7 +157,7 @@ export default function Home() {
 
         <section id="publications" className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Latest Publications</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Publications</h2>
             <PublicationsList publications={publications} />
           </div>
         </section>
@@ -164,7 +168,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {members.map((member) => (
                 <Link 
-                  href={`/members/${member.slug}`} 
+                  href={`/members/${member.id}`} 
                   key={member.id}
                   className="block transition-transform hover:scale-105"
                 >
@@ -179,6 +183,9 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-center">{member.name}</h3>
                     <p className="text-gray-600 text-center">{member.role}</p>
+                    {member.alumni && (
+                      <p className="text-gray-500 italic text-center mt-2">Alumni</p>
+                    )}
                   </div>
                 </Link>
               ))}

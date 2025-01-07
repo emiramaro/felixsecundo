@@ -10,7 +10,7 @@ interface PublicationsListProps {
 
 export function PublicationsList({ publications }: PublicationsListProps) {
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 5
+  const itemsPerPage = 3
   const totalPages = Math.ceil(publications.length / itemsPerPage)
   
   const startIndex = (currentPage - 1) * itemsPerPage

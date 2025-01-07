@@ -1,12 +1,12 @@
 export type Member = {
-    id: number;
     name: string;
     role: string;
     image: string;
+    id: string;
+    alumni?: boolean;
     bio: string;
     education: string[];
     research: string[];
-    slug: string;
   }
   
   export type Publication = {

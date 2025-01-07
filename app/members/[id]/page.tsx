@@ -2,9 +2,8 @@ import { members } from '@/data/members'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-export default function MemberPage({ params }: { params: { slug: string } }) {
-  // Find the member using the slug from the URL
-  const member = members.find(m => m.slug === params.slug)
+export default function MemberPage({ params }: { params: { id: string } }) {
+  const member = members.find(m => m.id === params.id)
   
   if (!member) {
     notFound()
@@ -20,23 +19,25 @@ export default function MemberPage({ params }: { params: { slug: string } }) {
                 <Image
                   src={member.image}
                   alt={member.name}
-                  fill
+                  width={200}
+                  height={200}
                   className="rounded-full object-cover"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h1 className="text-3xl font-bold mb-2">{member.name}</h1>
                 <p className="text-xl text-gray-600 mb-4">{member.role}</p>
-                <p className="text-gray-600 mb-6">{member.bio}</p>
-                
-                <h2 className="text-xl font-semibold mb-2">Education</h2>
-                <ul className="list-disc list-inside mb-6">
+                {member.alumni && (
+                  <p className="text-gray-500 italic mb-4">Alumni</p>
+                )}
+                <p className="text-gray-600 mb-4">{member.bio}</p>
+                <h2 className="text-2xl font-semibold mb-2">Education</h2>
+                <ul className="list-disc list-inside mb-4">
                   {member.education.map((edu, index) => (
                     <li key={index} className="text-gray-600">{edu}</li>
                   ))}
                 </ul>
-
-                <h2 className="text-xl font-semibold mb-2">Research Interests</h2>
+                <h2 className="text-2xl font-semibold mb-2">Research Interests</h2>
                 <ul className="list-disc list-inside">
                   {member.research.map((item, index) => (
                     <li key={index} className="text-gray-600">{item}</li>
