@@ -3,27 +3,27 @@ import { Publication } from '@/types'
 export const publications: Publication[] = [
   {
     id: 1,
-    title: "Novel biomarkers for early detection of pancreatic cancer",
-    authors: "Flo, et al.",
-    journal: "Nature Medicine",
+    title: "3D Cinematic rendering for evaluating femoral pseudoaneurysms in injection drug users",
+    authors: "Yasrab, et al.",
+    journal: "Emergency Radiology",
     year: 2024,
-    url: "https://doi.org/..."
+    url: "https://pubmed.ncbi.nlm.nih.gov/38710992/"
   },
   {
     id: 2,
-    title: "Immunotherapy combinations in pancreatic cancer treatment",
-    authors: "Ale, et al.",
-    journal: "Cancer Cell",
-    year: 2023,
-    url: "https://doi.org/..."
+    title: "3D Cinematic rendering for evaluating femoral pseudoaneurysms in injection drug users",
+    authors: "Yasrab, et al.",
+    journal: "Emergency Radiology",
+    year: 2024,
+    url: "https://pubmed.ncbi.nlm.nih.gov/38710992/"
   },
   {
     id: 3,
-    title: "Immunotherapy combinations in pancreatic cancer treatment",
-    authors: "Ale, et al.",
-    journal: "Cancer Cell",
-    year: 2023,
-    url: "https://doi.org/..."
+    title: "3D Cinematic rendering for evaluating femoral pseudoaneurysms in injection drug users",
+    authors: "Yasrab, et al.",
+    journal: "Emergency Radiology",
+    year: 2024,
+    url: "https://pubmed.ncbi.nlm.nih.gov/38710992/"
   },
   {
     id: 4,

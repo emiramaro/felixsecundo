@@ -28,7 +28,7 @@ export default function Home() {
     { name: 'Elliot K. Fishman, MD', role: 'Principal Investigator', image: elliot, id: 'elliot-fishman' },
     { name: 'Linda Chu, MD', role: 'Co-Investigator', image: linda, id: 'linda-chu' },
     { name: 'Satomi Kawamoto, MD', role: 'Co-Investigator', image: satomi, id: 'satomi-kawamoto' },
-    { name: 'Stephanie Blackwood', role: 'Sr. Administrator', image: steph, id: 'steph-blackwood' },
+    { name: 'Stephanie Blackwood', role: 'Sr. Administrative Coordinator', image: steph, id: 'steph-blackwood' },
     { name: 'Scott Graves', role: 'Research Technologist', image: placeholderImage, id: 'scott-graves' },
     { name: 'Alejandro Blanco, MD', role: 'Research Associate', image: ale, id: 'ale-blanco' },
     { name: 'Florent Tixier, PhD', role: 'Sr. Radiomics and AI Engineer', image: flo, id: 'flo-tixier' },
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="text-center md:text-left">
                 <h1 className="text-8xl font-bold mb-4">Advancing Pancreatic Cancer Research</h1>
-                <p className="text-xl mb-8">Pioneering innovative approaches to diagnose, treat, and prevent pancreatic cancer.</p>
+                <p className="text-xl mb-8">Pioneering approaches in early detection of pancreatic cancer.</p>
                 <Button variant="secondary" size="lg">
                   Learn More
                 </Button>
@@ -137,19 +137,23 @@ export default function Home() {
 
         <section id="research" className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Research Projects</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Research & Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Early Detection Biomarkers</h3>
-                <p className="text-gray-600">Identifying novel biomarkers for early-stage pancreatic cancer detection.</p>
+                <h3 className="text-xl font-semibold mb-4">Image2Radiomics</h3>
+                <p className="text-gray-600">A framework for radiology data and radiomics extraction.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Immunotherapy Strategies</h3>
-                <p className="text-gray-600">Developing innovative immunotherapy approaches to target pancreatic cancer cells.</p>
+                <h3 className="text-xl font-semibold mb-4">PDAC Early Detection</h3>
+                <p className="text-gray-600">Developing AI approaches in early detection of PDAC.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Drug Resistance Mechanisms</h3>
-                <p className="text-gray-600">Investigating the molecular mechanisms of drug resistance in pancreatic cancer.</p>
+                <h3 className="text-xl font-semibold mb-4">IPMN Risk Stratification</h3>
+                <p className="text-gray-600">AI tools in stratifying IPMN risk to determining treatment.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow">
+                <h3 className="text-xl font-semibold mb-4">Felix Reader Study</h3>
+                <p className="text-gray-600">Radiology viewer tool to conduct reliability study.</p>
               </div>
             </div>
           </div>

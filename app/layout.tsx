@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Felix Lab 2.0",
+  title: "Felix 2.0",
   description: "Felix lab website",
 };
 
