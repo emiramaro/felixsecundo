@@ -42,7 +42,10 @@ export const members: Member[] = [
     role: 'Co-Investigator',
     image: satomi,
     id: 'satomi-kawamoto',
-    bio: 'Dr. Kawamoto is a co-investigator focusing on AI in radiology.',
+    bio: `Dr. Satomi Kawamoto is an Associate Professor in the Johns Hopkins Medicine Department of Radiology and Radiological Science. She specializes in computed tomography (CT), ultrasound, and image-guided biopsy.
+    Dr. Kawamoto received her M.D. from Gunma University in Gunma, Japan, and subsequently completed two residencies, one in internal medicine at St. Luke’s International Hospital in Tokyo, and a second in diagnostic radiology at Johns Hopkins. 
+    She received a postdoctoral fellowship in cross-sectional imaging at Johns Hopkins, and then joined the Johns Hopkins faculty.
+    Dr. Kawamoto’s research focuses on body CT and biopsy, particularly imaging of the genitourinary and gastrointestinal systems.`,
     education: ['MD, University of Tokyo'],
     research: ['AI-assisted diagnosis', 'Radiomics'],
   },
@@ -65,7 +68,7 @@ export const members: Member[] = [
     research: [],
   },
   {
-    name: 'Alejandro Blanco, MD',
+    name: 'Alejandra Blanco, MD',
     role: 'Research Associate',
     image: ale,
     id: 'ale-blanco',
@@ -83,11 +86,11 @@ export const members: Member[] = [
     research: ['Deep learning', 'Radiomics'],
   },
   {
-    name: 'Felipe Ramirez, MD',
+    name: 'Felipe Lopez-Ramirez, MD',
     role: 'Post-doc Research Fellow',
     image: felipe,
     id: 'felipe-ramirez',
-    bio: 'Dr. Ramirez focuses on the development of novel imaging biomarkers.',
+    bio: 'Dr. Lopez-Ramirez focuses on the development of novel imaging biomarkers.',
     education: ['MD, Universidad Nacional Autónoma de México'],
     research: ['Biomarker discovery', 'Image processing'],
   },
@@ -106,8 +109,11 @@ export const members: Member[] = [
     role: 'Research Assistant',
     image: charles,
     id: 'charles-crawford',
-    bio: 'Charles assists with data collection and processing.',
-    education: ['BS, University of Maryland'],
+    bio: `Charles Crawford is a Research Program Assistant for the Felix 2.0 and CTisus laboratories with the Johns Hopkins School of Medicine, 
+    joining the team at the tail end of the summer of 2024. 
+    He received his bachelor of science degree in biology from Brown University in 2020 and plans to attend medical school. While at Brown, Charles spent his third and fourth years exploring the world of basic science research with the Roberts biomechanical lab, where he collaborated on various musculoskeletal testing projects. 
+    When Charles is not working, you usually find him playing pick-up baseball or reading a good fantasy novel.`,
+    education: ['BS, Brown University'],
     research: ['Data entry', 'Quality control'],
   },
   {

@@ -10,11 +10,11 @@ export type Member = {
   }
   
   export type Publication = {
-    id: number;
-    title: string;
+    id: string;
+    title: string | { sup: string; '#text': string };
     authors: string;
     journal: string;
-    year: number;
+    year: string;
     url: string;
   }
   
