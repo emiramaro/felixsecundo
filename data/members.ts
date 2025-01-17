@@ -29,8 +29,7 @@ export const members: Member[] = [
     research: ['Advanced imaging techniques', 'Early pancreatic cancer detection'],
     email: "efishman@jhmi.edu",
     phone: "+1 (410) 955-5173",
-    linkedin: "https://www.linkedin.com/in/elliot-fishman-123456/",
-    facebook: "https://www.facebook.com/elliot.fishman.123"
+    linkedin: "https://www.linkedin.com/in/elliot-fishman-ab732b13/",
   },
   {
     name: 'Linda Chu, MD',
@@ -43,9 +42,9 @@ export const members: Member[] = [
     She completed her Diagnostic Radiology residency and body MRI fellowship at Johns Hopkins Hospital. Dr. Chu joined the Johns Hopkins faculty in 2013.`,
     education: ['MD, University of Toronto'],
     research: ['Pancreatic cancer imaging', 'AI in radiology'],
-    email: "lchu@jhmi.edu",
+    email: "lchu1@jhmi.edu",
     phone: "+1 (410) 955-5174",
-    linkedin: "https://www.linkedin.com/in/linda-chu-789012/"
+    linkedin: "https://www.linkedin.com/in/linda-chu-31b01341/"
   },
   {
     name: 'Satomi Kawamoto, MD',
@@ -58,9 +57,9 @@ export const members: Member[] = [
     Dr. Kawamoto’s research focuses on body CT and biopsy, particularly imaging of the genitourinary and gastrointestinal systems.`,
     education: ['MD, University of Tokyo'],
     research: ['AI-assisted diagnosis', 'Radiomics'],
-    email: "skawamoto@jhmi.edu",
+    email: "skawamo1@jhmi.edu",
     phone: "+1 (410) 955-5175",
-    linkedin: "https://www.linkedin.com/in/satomi-kawamoto-345678/"
+    linkedin: "https://www.linkedin.com/in/satomi-kawamoto-1548543b/"
   },
   {
     name: 'Stephanie Blackwood',
@@ -70,9 +69,9 @@ export const members: Member[] = [
     bio: 'Stephanie manages the administrative aspects of the research project.',
     education: [],
     research: [],
-    email: "sblackwood@jhmi.edu",
+    email: "sblack29@jhmi.edu",
     phone: "+1 (410) 955-5176",
-    linkedin: "https://www.linkedin.com/in/stephanie-blackwood-901234/"
+    linkedin: "https://www.linkedin.com/in/stephanie-blackwood-927723157/"
   },
   {
     name: 'J. Scott Graves, R.T. (R) (CT)',
@@ -84,9 +83,9 @@ export const members: Member[] = [
     Beyond his professional accomplishments, Scott is passionate about astronomy and aerospace sciences, as well as horticulture and aquaculture, with a focus on epiphytic fauna. An avid outdoorsman, he enjoys activities such as hiking, cycling, snorkeling, scuba diving, fishing, and spearfishing.`,
     education: [],
     research: [],
-    email: "@jhmi.edu",
+    email: "",
     phone: "+1 (410) 955-5176",
-    linkedin: "https://www.linkedin.com/in/stephanie-blackwood-901234/"
+    linkedin: ""
   },
   {
     name: 'Alejandra Blanco, MD',
@@ -96,9 +95,9 @@ export const members: Member[] = [
     bio: 'Dr. Blanco contributes to data analysis and interpretation.',
     education: ['MD, University of Barcelona'],
     research: ['Statistical analysis', 'Data visualization'],
-    email: "ablanco@jhmi.edu",
+    email: "ablanc5@jhmi.edu",
     phone: "+1 (410) 955-5177",
-    linkedin: "https://www.linkedin.com/in/alejandro-blanco-567890/",
+    linkedin: "https://www.linkedin.com/in/alejandra-blanco-bb3442162/",
     alumni: false
   },
   {
@@ -109,9 +108,9 @@ export const members: Member[] = [
     bio: 'Florent develops and implements AI algorithms for medical image analysis.',
     education: ['PhD, INSA Lyon'],
     research: ['Deep learning', 'Radiomics'],
-    email: "ftixier@jhmi.edu",
+    email: "tixier@jhu.edu",
     phone: "+1 (410) 955-5178",
-    linkedin: "https://www.linkedin.com/in/florent-tixier-123456/",
+    linkedin: "https://www.linkedin.com/in/florent-tixier-61535638/",
     alumni: false
   },
   {
@@ -122,9 +121,9 @@ export const members: Member[] = [
     bio: 'Dr. Lopez-Ramirez focuses on the development of novel imaging biomarkers.',
     education: ['MD, Universidad Nacional Autónoma de México'],
     research: ['Biomarker discovery', 'Image processing'],
-    email: "framire@jhmi.edu",
+    email: "jlopezr5@jh.edu",
     phone: "+1 (410) 955-5179",
-    linkedin: "https://www.linkedin.com/in/felipe-ramirez-789012/",
+    linkedin: "https://www.linkedin.com/in/felipe-lopez-ramirez-543219140/",
     alumni: false
   },
   {
@@ -136,9 +135,9 @@ export const members: Member[] = [
     Aspiring to pursue a residency in diagnostic radiology, Dr. Yasrab is passionate about integrating cutting-edge imaging techniques with clinical care to enhance diagnostic precision.`,
     education: ['MD, King Abdulaziz University'],
     research: ['Clinical trials', 'Data management'],
-    email: "framire@jhmi.edu",
+    email: "myasrab1@jh.edu",
     phone: "+1 (410) 955-5179",
-    linkedin: "https://www.linkedin.com/in/felipe-ramirez-789012/",
+    linkedin: "https://www.linkedin.com/in/mohammad-yasrab-b6b8261b0/",
     alumni: false
   },
   {
@@ -152,9 +151,9 @@ export const members: Member[] = [
     When Charles is not working, you usually find him playing pick-up baseball or reading a good fantasy novel.`,
     education: ['BS, Brown University'],
     research: ['Data entry', 'Quality control'],
-    email: "framire@jhmi.edu",
+    email: "ccrawf32@jh.edu",
     phone: "+1 (410) 955-5179",
-    linkedin: "https://www.linkedin.com/in/felipe-ramirez-789012/",
+    linkedin: "https://www.linkedin.com/in/charleskcrawford/",
     alumni: false
   },
   {
@@ -165,9 +164,9 @@ export const members: Member[] = [
     bio: 'Dr. Arshad contributes to the development of new imaging techniques.',
     education: ['MD, Aga Khan University'],
     research: ['Image analysis', 'Algorithm development'],
-    email: "framire@jhmi.edu",
+    email: "harshad1@jh.edu",
     phone: "+1 (410) 955-5179",
-    linkedin: "https://www.linkedin.com/in/felipe-ramirez-789012/",
+    linkedin: "https://www.linkedin.com/in/hajra-arshad4/",
     alumni: false
   },
   {
@@ -175,12 +174,16 @@ export const members: Member[] = [
     role: 'Post-doc Research Fellow',
     image: emir,
     id: 'emir-syailendra',
-    bio: 'Dr. Syailendra focuses on the application of AI in pancreatic cancer research.',
+    bio: `Emir is a research fellow at Johns Hopkins Medicine specializing in AI-driven early detection of pancreatic cancer using advanced imaging. 
+    With a background in medicine and biomedical informatics, he integrates data science and clinical knowledge to improve diagnostic approaches. 
+    Emir did his medical training at Universitas Sriwijaya, Indonesia and his master's in biomedical informatics at Johns Hopkins University. 
+    Emir is passionate about advancing AI/ML research within health care and pursuing innovative solution in the field of radiology and cardiology.
+    On his free time, Emir likes to make music, video editing, read philosophical and biography book, and playing basketball.`,
     education: ['MD, MS, University of Indonesia'],
     research: ['AI applications', 'Machine learning'],
-    email: "framire@jhmi.edu",
+    email: "msyaile1@jhu.edu",
     phone: "+1 (410) 955-5179",
-    linkedin: "https://www.linkedin.com/in/felipe-ramirez-789012/",
+    linkedin: "https://www.linkedin.com/in/emirsyailendra/",
     alumni: false
   },
   {
