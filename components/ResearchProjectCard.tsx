@@ -12,7 +12,7 @@ export const ResearchProjectCard: React.FC<ResearchProjectCardProps> = ({ projec
       <div className="bg-white p-4 rounded-lg shadow h-full flex flex-col justify-between">
         <div>
           <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-          <p className="text-sm text-gray-600">{project.description}</p>
+          <p className="text-md text-gray-600">{project.description}</p>
         </div>
         <div className="mt-4 text-sm text-primary font-medium">Learn more</div>
       </div>

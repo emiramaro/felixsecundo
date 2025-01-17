@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Button } from "@/components/ui/button"
-import { Linkedin, Facebook } from 'lucide-react'
+import { Linkedin, Mail } from 'lucide-react'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -23,14 +23,30 @@ export default function MemberPage({ params }: { params: { id: string } }) {
           <div className="bg-white rounded-lg shadow overflow-hidden">
             <div className="p-8">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <div className="relative w-48 h-48 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={200}
-                    height={200}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="flex flex-col items-center">
+                  <div className="relative w-48 h-48 flex-shrink-0 rounded-full overflow-hidden mb-4">
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      width={200}
+                      height={200}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start gap-2 w-full"> {/* Updated div */}
+                    {member.email && (
+                      <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-gray-600 hover:text-primary w-full"> {/* Updated link */}
+                        <Mail size={18} />
+                        <span>{member.email}</span>
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-primary w-full"> {/* Updated link */}
+                        <Linkedin size={18} />
+                        <span>LinkedIn</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h1 className="text-3xl font-bold mb-2">{member.name}</h1>
