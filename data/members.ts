@@ -11,6 +11,9 @@ import charles from '../public/assets/images/charles-crawford.jpg';
 import hajra from '../public/assets/images/hajra-arshad.jpg';
 import emir from '../public/assets/images/emir-syailendra.jpg';
 import yasrab from '../public/assets/images/moh-yasrab.jpg';
+import scott from '../public/assets/images/scott-graves.jpg';
+import taha from '../public/assets/images/taha-ahmed.png';
+import ryan from '../public/assets/images/ryan-rizk.jpg';
 
 export const members: Member[] = [
 {
@@ -59,11 +62,13 @@ export const members: Member[] = [
     research: [],
   },
   {
-    name: 'Scott Graves',
+    name: 'J. Scott Graves, R.T. (R) (CT)',
     role: 'Research Technologist',
-    image: placeholderImage,
+    image: scott,
     id: 'scott-graves',
-    bio: 'Scott provides technical support for the research team.',
+    bio: `J. Scott Graves is a highly experienced imaging technologist with a career spanning over two decades in radiologic and computed tomography (CT) technology. Currently a research imaging technologist at Johns Hopkins University, Scott specializes in advanced AI applications for 3D volumetric renderings.
+    Scott's expertise extends to teaching, serving as Lead Instructor for Cross-Sectional Anatomy at the Johns Hopkins School of Medical Imaging since 2007. He has delivered numerous lectures at conferences and symposia, sharing his knowledge of cardiac, thoracic, and abdominal imaging.
+    Beyond his professional accomplishments, Scott is passionate about astronomy and aerospace sciences, as well as horticulture and aquaculture, with a focus on epiphytic fauna. An avid outdoorsman, he enjoys activities such as hiking, cycling, snorkeling, scuba diving, fishing, and spearfishing.`,
     education: [],
     research: [],
   },
@@ -137,11 +142,22 @@ export const members: Member[] = [
   {
     name: 'Taha Ahmed, MD',
     role: 'Post-doc Research Fellow',
-    image: placeholderImage,
+    image: taha,
     id: 'taha-ahmed',
     alumni: true,
     bio: 'Dr. Ahmed contributed to several key research projects during his fellowship.',
     education: ['MD, Cairo University'],
     research: ['Pancreatic cancer biomarkers', 'Immunotherapy response prediction'],
   },
+  {
+    name: 'Ryan Rizk, BS',
+    role: 'Research Assistant',
+    image: ryan,
+    id: 'ryan-rizk',
+    alumni: true,
+    bio: `Ryan Rizk is a Research Assistant for the Felix 2.0 and CTisus laboratories with the Johns Hopkins School of Medicine. 
+    He received his bachelor of science degree from University of Miami in 2020 and now attending the medical school in Miami.`,
+    education: ['MD, Cairo University'],
+    research: ['Pancreatic cancer biomarkers', 'Immunotherapy response prediction'],
+  }
 ];

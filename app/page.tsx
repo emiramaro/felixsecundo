@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Linkedin, Facebook } from 'lucide-react'
 import { PublicationsList } from '@/components/publications-list'
+import { AlumniCarousel } from '@/components/AlumniCarousel'
+import { MemberCard } from '@/components/MemberCard'
+import { ResearchProjectCarousel } from '@/components/ResearchProjectCarousel'
+import { researchProjects } from '@/data/research'
 import { members } from '@/data/members'
 // import { publications } from '@/data/publications'
 import { useEffect, useState } from 'react'
@@ -23,6 +27,8 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const currentMembers = members.filter(member => !member.alumni)
+  const alumniMembers = members.filter(member => member.alumni)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -67,9 +73,9 @@ export default function Home() {
               <div className="text-center md:text-left">
                 <h1 className="text-8xl font-bold mb-4">Advancing Pancreatic Cancer Research</h1>
                 <p className="text-xl mb-8">Pioneering approaches in early detection of pancreatic cancer.</p>
-                <Button variant="secondary" size="lg">
+                {/* <Button variant="secondary" size="lg">
                   Learn More
-                </Button>
+                </Button> */}
               </div>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
                 <video 
@@ -102,7 +108,7 @@ export default function Home() {
               </div>
               <div className="relative h-0 pb-[56.25%]">
                 <iframe
-                  src="https://www.youtube.com/embed/Ls3WOE9dhOQ?start=11"
+                  src="https://www.youtube.com/embed/Ls3WOE9dhOQ?start=0"
                   title="Felix Lab Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -130,24 +136,7 @@ export default function Home() {
         <section id="research" className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Research & Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Image2Radiomics</h3>
-                <p className="text-gray-600">A framework for radiology data and radiomics extraction.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">PDAC Early Detection</h3>
-                <p className="text-gray-600">Developing AI approaches in early detection of PDAC.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">IPMN Risk Stratification</h3>
-                <p className="text-gray-600">AI tools in stratifying IPMN risk to determining treatment.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Felix Reader Study</h3>
-                <p className="text-gray-600">Radiology viewer tool to conduct reliability study.</p>
-              </div>
-            </div>
+            <ResearchProjectCarousel projects={researchProjects} />
           </div>
         </section>
 
@@ -162,7 +151,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {members.map((member) => (
+              {currentMembers.map((member) => (
                 <Link 
                   href={`/members/${member.id}`} 
                   key={member.id}
@@ -171,7 +160,7 @@ export default function Home() {
                   <div className="bg-white p-6 rounded-lg shadow">
                     <div className="relative w-32 h-32 mx-auto mb-4">
                       <Image 
-                        src={member.image} 
+                        src={member.image || "/placeholder.svg"} 
                         alt={member.name} 
                         fill
                         className="rounded-full object-cover"
@@ -179,9 +168,6 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-center">{member.name}</h3>
                     <p className="text-gray-600 text-center">{member.role}</p>
-                    {member.alumni && (
-                      <p className="text-gray-500 italic text-center mt-2">Alumni</p>
-                    )}
                   </div>
                 </Link>
               ))}
@@ -189,15 +175,36 @@ export default function Home() {
           </div>
         </section>
 
+        {/* <section id="members" className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+              {currentMembers.map((member) => (
+                <MemberCard key={member.id} member={member} />
+              ))}
+            </div>
+          </div>
+        </section> */}
+
+        <section id="alumni" className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-8 text-center">Our Alumni</h2>
+            <AlumniCarousel alumni={alumniMembers} />
+          </div>
+        </section>
+
         <section id="join" className="bg-primary text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-8">Join Our Team</h2>
-            <p className="text-xl mb-8">We're always looking for passionate researchers to join our fight against pancreatic cancer.</p>
-            <Button variant="secondary" size="lg">
-              View Open Positions
+            <h2 className="text-3xl font-bold mb-8">Collaboration</h2>
+            <p className="text-xl mb-8">
+              We're always looking for passionate researchers to join our fight against pancreatic cancer.
+            </p>
+            <Button variant="secondary" size="lg" as="a" href="mailto:ablanco5@jhmi.edu">
+              Get in Touch
             </Button>
           </div>
         </section>
+
       </main>
 
       <footer className="bg-black text-white py-12">
@@ -227,9 +234,9 @@ export default function Home() {
                 <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                   <Linkedin size={24} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                {/* <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                   <Facebook size={24} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
