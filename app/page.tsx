@@ -8,6 +8,7 @@ import { PublicationsList } from '@/components/publications-list'
 import { AlumniCarousel } from '@/components/AlumniCarousel'
 import { MemberCard } from '@/components/MemberCard'
 import { ResearchProjectCarousel } from '@/components/ResearchProjectCarousel'
+import { SupportedBy } from '@/components/SupportedBy'
 import { researchProjects } from '@/data/research'
 import { members } from '@/data/members'
 // import { publications } from '@/data/publications'
@@ -192,6 +193,8 @@ export default function Home() {
             <AlumniCarousel alumni={alumniMembers} />
           </div>
         </section>
+        
+        <SupportedBy />
 
         <section id="join" className="bg-primary text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -204,7 +207,7 @@ export default function Home() {
             </Button>
           </div>
         </section>
-
+           
       </main>
 
       <footer className="bg-black text-white py-12">

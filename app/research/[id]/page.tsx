@@ -27,7 +27,7 @@ export default function ResearchProjectPage({ params }: { params: { id: string }
                 {project.images && project.images.length > 0 && (
                   <ImageGallery images={project.images} />
                 )}
-                <div className="prose max-w-none mt-6">
+                <div className="prose max-w-none mt-6 text-justify">
                   <p>{project.details}</p>
                 </div>
               </div>
